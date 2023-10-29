@@ -1,31 +1,18 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Light.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Light.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Regular.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Regular.woff') format('woff');
+  font-family: 'Corporate A Cond';
+  src: url('fonts/CorporateAPro-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Medium.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
+  font-family: 'Corporate A Cond';
+  src: url('fonts/CorporateAPro-RegularItalic.ttf') format('ttf');
+  font-weight: 400;
+  font-style: italic;
 }
-
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('fonts/PT-Root-UI_Bold.woff2') format('woff2'),
-    url('fonts/PT-Root-UI_Bold.woff') format('woff');
-  font-weight: 700;
+  font-family: 'IBMP Plex Sans Regular';
+  src: url('fonts/IBMPlexSans-Regular.ttf') format('ttf');
+  font-weight: 400;
   font-style: normal;
 }
