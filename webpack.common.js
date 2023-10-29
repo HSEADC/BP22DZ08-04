@@ -100,6 +100,11 @@ module.exports = {
       filename: './index.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: './src/about.html',
+      filename: './about.html'
+    }),
+
     // Section
     new HtmlWebpackPlugin({
       template: './src/philosophy.html',
