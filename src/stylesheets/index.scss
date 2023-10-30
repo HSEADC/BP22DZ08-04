@@ -4,7 +4,7 @@ body.index {
 #pole {
   background-color: #00340f;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid white;
 }
 
 #my-form-button {
@@ -17,10 +17,12 @@ body.index {
   padding-right: 30px;
 }
 .gren-fon {
+  margin-top: 20px;
   background-color: #00340f;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  padding: 16px;
 }
 
 .nadpis {
@@ -30,6 +32,7 @@ body.index {
 }
 
 .form-nadpis-2 {
+  margin-top: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,10 +40,22 @@ body.index {
 }
 
 .sht {
+  margin-top: 20px;
 }
 
 .pic-sht {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.hand {
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.pereh {
+  font-size: 40px;
 }
