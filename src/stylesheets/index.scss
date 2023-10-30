@@ -1,3 +1,46 @@
-body.article {
-  background: rgb(207, 18, 18);
+body.index {
+}
+
+#pole {
+  background-color: #00340f;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+#my-form-button {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  margin-left: 50px;
+  border-radius: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.gren-fon {
+  background-color: #00340f;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.nadpis {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-nadpis-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.sht {
+}
+
+.pic-sht {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

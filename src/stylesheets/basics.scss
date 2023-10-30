@@ -5,11 +5,27 @@
 html,
 body {
   height: 100%;
+  width: 98vw;
+  margin: 0 auto;
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Corporate A Cond';
   font-size: 14px;
   font-weight: 400;
   background-color: var(--dark);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+}
+
+p {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
 }

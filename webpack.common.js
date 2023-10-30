@@ -80,7 +80,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|woff|woff2)$/i,
+        test: /\.(ttf|otf)$/i,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]'
@@ -88,174 +88,125 @@ module.exports = {
       }
     ]
   },
-  plugins: new MiniCssExtractPlugin({
-    filename: '[name].[contenthash].css',
-    chunkFilename: '[id].[contenthash].css'
-  })
-}
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: '[id].[contenthash].css'
+    }),
 
-// promo
-new HtmlWebpackPlugin({
-  hash: true,
-  scriptLoading: 'blocking',
-  template: './src/index.html',
-  filename: './index.html',
-  chunks: ['index']
-}),
-  // about
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/about.html',
-    filename: './about.html',
-    chunks: ['index']
-  }),
-  // artic
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/artic.html',
-    filename: './artic.html',
-    chunks: ['index']
-  }),
-  // gid
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/gid.html',
-    filename: './gid.html',
-    chunks: ['index']
-  }),
-  // kult
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult.html',
-    filename: './kult.html',
-    chunks: ['index']
-  }),
-  // philosophy
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/philosophy.html',
-    filename: './philosophy.html',
-    chunks: ['index']
-  })
+    // promo
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    }),
+    // about
+    new HtmlWebpackPlugin({
+      template: './src/about.html',
+      filename: './about.html'
+    }),
+    // artic
+    new HtmlWebpackPlugin({
+      template: './src/artic.html',
+      filename: './artic.html'
+    }),
+    // gid
+    new HtmlWebpackPlugin({
+      template: './src/gid.html',
+      filename: './gid.html'
+    }),
+    // kult
+    new HtmlWebpackPlugin({
+      template: './src/kult.html',
+      filename: './kult.html'
+    }),
+    // philosophy
+    new HtmlWebpackPlugin({
+      template: './src/philosophy.html',
+      filename: './philosophy.html'
+    }),
 
-// First
-new HtmlWebpackPlugin({
-  hash: true,
-  scriptLoading: 'blocking',
-  template: './src/artic/first.html',
-  filename: './artic/first.html',
-  chunks: ['index']
-}),
-  // First2
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/artic/first2.html',
-    filename: './artic/first2.html',
-    chunks: ['index']
-  }),
-  // First3
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/artic/first3.html',
-    filename: './artic/first3.html',
-    chunks: ['index']
-  }),
-  // eat
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/gid/eat.html',
-    filename: './gid/eat.html',
-    chunks: ['index']
-  }),
-  // fun
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/gid/fun.html',
-    filename: './gid/fun.html',
-    chunks: ['index']
-  }),
-  // bogem
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/gid/bogem.html',
-    filename: './gid/bogem.html',
-    chunks: ['index']
-  }),
-  // exhibition
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult/exhibition.html',
-    filename: './kult/exhibition.html',
-    chunks: ['index']
-  }),
-  // bea
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult/bea.html',
-    filename: './kult/bea.html',
-    chunks: ['index']
-  }),
-  // see
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult/see.html',
-    filename: './kult/see.html',
-    chunks: ['index']
-  }),
-  // trev
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult/trev.html',
-    filename: './kult/trev.html',
-    chunks: ['index']
-  }),
-  // vdoh
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/kult/vdoh.html',
-    filename: './kult/vdoh.html',
-    chunks: ['index']
-  }),
-  // work
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/philosoohy/work.html',
-    filename: './philosoohy/work.html',
-    chunks: ['index']
-  }),
-  // inspo
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/philosoohy/inspo.html',
-    filename: './philosoohy/inspo.html',
-    chunks: ['index']
-  }),
-  // self
-  new HtmlWebpackPlugin({
-    hash: true,
-    scriptLoading: 'blocking',
-    template: './src/philosoohy/self.html',
-    filename: './philosoohy/self.html',
-    chunks: ['index']
-  })
+    // First
+    new HtmlWebpackPlugin({
+      template: './src/artic/first.html',
+      filename: './artic/first.html'
+    }),
+    // First1
+    new HtmlWebpackPlugin({
+      template: './src/artic/first1.html',
+      filename: './artic/first1.html'
+    }),
+    // First2
+    new HtmlWebpackPlugin({
+      template: './src/artic/first2.html',
+      filename: './artic/first2.html'
+    }),
+    // eat
+    new HtmlWebpackPlugin({
+      template: './src/gid/eat.html',
+      filename: './gid/eat.html'
+    }),
+    // fun
+    new HtmlWebpackPlugin({
+      template: './src/gid/fun.html',
+      filename: './gid/fun.html'
+    }),
+    // bogem
+    new HtmlWebpackPlugin({
+      template: './src/gid/bogem.html',
+      filename: './gid/bogem.html'
+    }),
+    // exhibition
+    new HtmlWebpackPlugin({
+      template: './src/kult/exhibition.html',
+      filename: './kult/exhibition.html'
+    }),
+    // bea
+    new HtmlWebpackPlugin({
+      template: './src/kult/bea.html',
+      filename: './kult/bea.html'
+    }),
+    // see
+    new HtmlWebpackPlugin({
+      template: './src/kult/see.html',
+      filename: './kult/see.html'
+    }),
+    // trev
+    new HtmlWebpackPlugin({
+      template: './src/kult/trev.html',
+      filename: './kult/trev.html'
+    }),
+    // vdoh
+    new HtmlWebpackPlugin({
+      template: './src/kult/vdoh.html',
+      filename: './kult/vdoh.html'
+    }),
+    // work
+    new HtmlWebpackPlugin({
+      template: './src/philosophy/work.html',
+      filename: './philosophy/work.html'
+    }),
+    // inspo
+    new HtmlWebpackPlugin({
+      template: './src/philosophy/inspo.html',
+      filename: './philosophy/inspo.html'
+    }),
+    // self
+    new HtmlWebpackPlugin({
+      template: './src/philosophy/self.html',
+      filename: './philosophy/self.html'
+    }),
 
-optimization: {
-  minimizer: [new CssMinimizerPlugin()]
+    // Partials
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/analytics.html'),
+        location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ])
+  ],
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()]
+  }
 }
