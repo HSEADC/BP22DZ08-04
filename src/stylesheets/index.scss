@@ -7,6 +7,7 @@ body.index {
   border: none;
   padding-bottom: 10px;
   border-bottom: 1px solid white;
+  padding-right: 16px;
 }
 
 #my-form-button {
@@ -14,10 +15,10 @@ body.index {
   border: none;
   padding: 10px;
   background-color: white;
-  margin-left: 50px;
+  margin-left: 40px;
   border-radius: 18px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .gren-fon {
   font-size: 20px;
@@ -26,10 +27,11 @@ body.index {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  padding: 37px;
+  padding: 42px;
 }
 
 .nadpis {
+  font-style: italic;
   font-size: 36px;
   display: flex;
   flex-direction: row;
@@ -37,7 +39,7 @@ body.index {
 }
 
 .form-nadpis-2 {
-  margin-top: 16px;
+  margin-top: 45px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

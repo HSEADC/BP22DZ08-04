@@ -1,0 +1,40 @@
+.picti {
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+
+.bab {
+  padding-right: 10px;
+}
+
+.voda {
+  border-radius: 10px;
+}
+.block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blue-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.textt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blue-b {
+  font-size: 24px;
+  color: blue;
+  font-family: 'CeraPro';
+  font-style: italic;
+}
+.wit-texx {
+  font-size: 24px;
+  color: black;
+}

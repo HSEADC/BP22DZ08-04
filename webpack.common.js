@@ -80,7 +80,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|otf)$/i,
+        test: /\.(woff|woff2|ttf|otf)$/i,
         loader: 'file-loader',
         options: {
           name: 'fonts/[name].[ext]'

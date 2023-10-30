@@ -10,18 +10,19 @@ body {
 }
 
 body {
-  font-family: 'Corporate A Cond';
+  font-family: 'CeraPro';
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   background-color: var(--dark);
 }
 
 h1 {
-  font-size: 36px;
-  font-family: 'Corporate A Cond';
+  font-size: 39px;
+  font-family: 'CeraPro';
   font-weight: 300;
   font-style: normal;
   text-align: center;
+  line-height: 1.5;
 }
 
 p {
@@ -29,6 +30,7 @@ p {
 }
 
 a {
+  font-style: italic;
   text-decoration: none;
   color: blue;
 }

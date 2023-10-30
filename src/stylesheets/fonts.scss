@@ -1,20 +1,21 @@
 @font-face {
-  font-family: 'Corporate A Cond';
-  src: url('fonts/CeraPro-ThinItalic.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Corporate A Cond';
-  src: url('fonts/CeraPro-Thin.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Plex Sans';
   src: url('fonts/IBMPlexSans-Regular.ttf') format('ttf');
   font-weight: 300;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraPro';
+  src: url('fonts/CeraPro-Light.woff') format('woff');
+  src: url('fonts/CeraPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CeraPro';
+  src: url('fonts/CeraPro-LightItalic.woff') format('woff');
+  src: url('fonts/CeraPro-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
 }
