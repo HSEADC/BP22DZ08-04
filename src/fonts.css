@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Playfair Display;
+    src: url(../fonts/PlayfairDisplay-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Playfair Display;
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Pinyon Script;
+    src: url(../fonts/PinyonScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bickham Script Two;
+    src: url(../fonts/bickhamscripttwo.ttf);
+}
+
+@font-face {
+    font-family: Helvetica Light;
+    src: url(../fonts/Helvetica-Light-Regular.otf);
+}

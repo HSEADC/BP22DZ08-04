@@ -73,19 +73,9 @@ module.exports = {
         }
       },
       {
-        test: /\.svg/,
+        test: /\.(jpe?g|svg|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'images/[hash][ext][query]'
-        }
       },
-      {
-        test: /\.(woff|woff2|ttf|otf)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
-        }
-      }
     ]
   },
   plugins: [
@@ -108,6 +98,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/artic.html',
       filename: './artic.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/article.html',
+      filename: './article.html'
     }),
     // gid
     new HtmlWebpackPlugin({
@@ -207,6 +201,6 @@ module.exports = {
     ])
   ],
   optimization: {
-    minimizer: [new CssMinimizerPlugin()]
+    portableRecords: true,
   }
 }

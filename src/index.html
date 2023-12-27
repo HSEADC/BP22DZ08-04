@@ -3,32 +3,432 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Промо</title>
+    <link href="index.css" rel="stylesheet" />
+    <title>Document</title>
   </head>
-  <body id="index">
-    <div class="pic-sht">
-      <a class="pereh" href="about.html">A</a>
-      <img class="sht" src="./images/sht.svg" alt="Shtuka" />
-    </div>
-
-    <h1>
-      Alive — медиа про гедонизм, свободу и о том, <br />
-      как услышать себя среди вечной суеты
-    </h1>
-
-    <img class="hand" src="./images/hand.png" alt="hand" />
-
-    <div class="gren-fon">
-      <div class="nadpis">
-        <p>УЗНАЙ О ЗАПУСКЕ ПЕРВЫМ</p>
-        <p>ALIVE MEDIA</p>
+  <body>
+    <canvas class="grain"></canvas>
+    <div class="content">
+      <div class="header">
+        <ul class="nav">
+          <li class="logo">
+            <svg
+              width="140"
+              height="71"
+              viewBox="0 0 140 71"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M39.24 57.12C39.24 57.92 36.48 60.52 30.96 64.92C26.96 68.12 23.52 69.72 20.64 69.72C18.32 69.72 17.16 68.76 17.16 66.84C17.16 65.4 17.72 64.08 18.84 62.88H18.72C13.68 67.44 9.16 69.72 5.16 69.72C2.12 69.72 0.6 68.4 0.6 65.76C0.6 63.44 1.72 61 3.96 58.44H3.84C2.64 59.72 1.88 60.36 1.56 60.36C1.4 60.36 1.28 60.32 1.2 60.24V60C1.2 60 1.24 59.84 1.32 59.52C3.32 57.12 6.64 54.68 11.28 52.2C16 49.64 19.76 48.36 22.56 48.36C25.36 48.36 26.76 49.4 26.76 51.48C26.76 51.96 26.68 52.48 26.52 53.04H26.64C29.36 50 31.84 48.48 34.08 48.48C35.12 48.48 35.64 48.6 35.64 48.84C35.64 49.08 33.6 51.68 29.52 56.64C25.44 61.52 23.4 64.76 23.4 66.36L23.64 66.96C23.88 67.04 24.16 67.08 24.48 67.08C26.16 67.08 28.92 65.44 32.76 62.16C36.68 58.8 38.8 57.08 39.12 57C39.2 57.08 39.24 57.12 39.24 57.12ZM25.68 51.84C25.68 50.4 24.92 49.68 23.4 49.68C21.32 49.68 17.84 52 12.96 56.64C8.16 61.28 5.76 64.56 5.76 66.48C5.76 67.44 6.28 67.92 7.32 67.92C9.64 67.92 13.28 65.76 18.24 61.44C23.2 57.12 25.68 53.92 25.68 51.84ZM100.81 3.95999C100.81 6.92 98.0503 11 92.5303 16.2C87.0903 21.32 73.7303 32.6 52.4503 50.04C51.4103 50.84 49.5703 53.4 46.9303 57.72C44.3703 62.04 43.0903 64.76 43.0903 65.88L43.3303 66.48C43.6503 66.8 43.9703 66.96 44.2903 66.96C47.0103 66.96 51.4503 63.92 57.6103 57.84L59.1703 57.12V57.36C59.1703 58.16 56.4503 60.68 51.0103 64.92C46.8503 68.12 43.2503 69.72 40.2103 69.72C37.7303 69.72 36.4903 68.8 36.4903 66.96C36.4903 64.56 38.6903 60.36 43.0903 54.36H42.9703C39.4503 57.64 37.4503 59.28 36.9703 59.28C36.8903 59.2 36.8503 59.16 36.8503 59.16C36.9303 58.52 38.2503 57.12 40.8103 54.96C42.4103 53.6 44.0103 52.24 45.6103 50.88C46.9703 49.12 49.0503 46.48 51.8503 42.96C74.5703 14.8 89.6503 0.719999 97.0903 0.719999C99.5703 0.719999 100.81 1.8 100.81 3.95999ZM97.8103 4.32C97.8103 2.8 97.1303 2.04 95.7703 2.04C92.8103 2.04 85.5703 8.8 74.0503 22.32C65.6503 32.08 59.0903 40.28 54.3703 46.92V47.04C62.6103 40 70.8503 32.92 79.0903 25.8C91.5703 14.6 97.8103 7.44 97.8103 4.32ZM85.8094 33.84C85.8094 34.96 85.0094 36.08 83.4094 37.2C81.8894 38.32 80.5294 38.88 79.3294 38.88C79.0094 38.56 78.8494 37.84 78.8494 36.72C78.8494 33.92 80.6094 32.52 84.1294 32.52C85.2494 32.52 85.8094 32.96 85.8094 33.84ZM78.7294 57.24C78.7294 58.12 76.0094 60.68 70.5694 64.92C66.3294 68.2 62.8494 69.84 60.1294 69.84C57.7294 69.84 56.5294 68.92 56.5294 67.08C56.5294 65.24 57.9294 62.52 60.7294 58.92C63.0494 55.88 65.2494 53.52 67.3294 51.84V51.72C66.0494 52.6 64.1294 54.04 61.5694 56.04C60.6094 56.92 59.1694 58.16 57.2494 59.76C56.7694 60.08 56.3694 60.24 56.0494 60.24L55.9294 60C56.7294 58.16 59.3294 55.84 63.7294 53.04C68.1294 50.16 71.4494 48.72 73.6894 48.72C74.2494 48.72 74.7294 48.8 75.1294 48.96V49.2C75.1294 49.36 73.0894 51.92 69.0094 56.88C64.9294 61.76 62.8894 64.84 62.8894 66.12C62.9694 66.36 63.0894 66.6 63.2494 66.84C63.4094 67.08 63.6494 67.2 63.9694 67.2C65.3294 67.2 67.8494 65.6 71.5294 62.4C75.2894 59.12 77.6894 57.36 78.7294 57.12V57.24ZM114.025 57.12C111.065 61.44 107.545 63.6 103.465 63.6C101.305 63.6 100.065 62.84 99.7453 61.32C89.7453 67.16 82.8653 70.08 79.1053 70.08C77.9053 70.08 77.3053 69.52 77.3053 68.4C77.3053 67.92 79.2253 65.4 83.0653 60.84C86.9853 56.2 88.9853 53.2 89.0653 51.84L88.7053 51.24L87.9853 51C85.4253 52.04 81.6653 54.88 76.7053 59.52C76.1453 60.08 75.7453 60.36 75.5053 60.36C75.1853 60.36 75.0253 60.2 75.0253 59.88C75.0253 59.08 77.2253 57 81.6253 53.64C86.1053 50.2 89.3053 48.48 91.2253 48.48C93.4653 48.48 94.5853 49.6 94.5853 51.84C94.5853 55.92 90.9053 61.2 83.5453 67.68V67.8C85.5453 67.24 88.3453 66.08 91.9453 64.32C95.6253 62.48 98.1853 60.96 99.6253 59.76C99.9453 57.68 100.865 55.36 102.385 52.8C104.225 49.92 106.025 48.48 107.785 48.48C108.745 48.48 109.225 49.04 109.225 50.16C109.225 51.84 108.185 53.8 106.105 56.04C104.505 57.88 102.745 59.4 100.825 60.6C100.985 61.88 101.945 62.52 103.705 62.52C105.545 62.52 107.665 61.6 110.065 59.76C112.465 57.92 113.745 57 113.905 57C113.985 57 114.025 57.04 114.025 57.12ZM139.576 57.24C139.576 57.48 139.216 57.96 138.496 58.68C135.536 61.72 132.256 64.28 128.656 66.36C124.416 68.84 120.496 70.08 116.896 70.08C112.496 70.08 110.296 68.6 110.296 65.64C110.296 63.48 111.256 61.12 113.176 58.56H113.056C111.936 59.76 111.176 60.36 110.776 60.36C110.696 60.36 110.616 60.32 110.536 60.24V60C110.536 60 110.576 59.84 110.656 59.52C112.896 57.04 116.176 54.6 120.496 52.2C125.136 49.72 128.936 48.48 131.896 48.48C134.216 48.48 135.376 49.52 135.376 51.6C135.376 55.2 129.336 58.92 117.256 62.76C116.776 64.36 116.536 65.44 116.536 66C116.536 67.44 117.456 68.16 119.296 68.16C121.776 68.16 124.696 67.2 128.056 65.28C130.376 63.92 132.896 62.12 135.616 59.88C137.936 57.88 139.136 56.88 139.216 56.88C139.456 56.88 139.576 57 139.576 57.24ZM131.176 51.12C131.176 50.4 130.696 50.04 129.736 50.04C128.136 50.04 125.936 51.56 123.136 54.6C120.976 56.92 119.256 59.2 117.976 61.44V61.56C126.776 58.76 131.176 55.28 131.176 51.12Z"
+                fill="#EDEBC5"
+              />
+            </svg>
+          </li>
+          <li class="nav-item">
+            <a href="article.html" class="nav-link">статьи</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">подборки</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">места</a>
+          </li>
+        </ul>
       </div>
-      <div class="form-nadpis-2">
-        <div>
+      <div class="border">
+        <div class="alive-media">
+          <h1 class="a">A</h1>
+          <h1 class="cursive">live media</h1>
+        </div>
+        <div class="text">
+          <h1 class="maintext">мы про гедонизм,</h1>
+        </div>
+        <div class="ellipse">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="227"
+            height="90"
+            viewBox="0 0 227 90"
+            fill="none"
+          >
+            <path
+              d="M225 67.0846C223.9 72.0182 219.919 76.2942 213.337 79.7439C206.762 83.1892 197.732 85.7303 186.846 87.2394C165.085 90.2561 136.139 89.118 105.185 83.0764C74.2304 77.0348 47.2122 67.2501 28.5551 56.3447C19.2223 50.8894 12.0311 45.1823 7.4773 39.565C2.91764 33.9405 1.09649 28.5323 2.19649 23.5986C3.29649 18.665 7.27683 14.3891 13.8597 10.9393C20.434 7.49404 29.4643 4.95295 40.3499 3.44387C62.111 0.427115 91.0571 1.5653 122.011 7.60686C152.966 13.6484 179.984 23.4332 198.641 34.3386C207.974 39.7938 215.165 45.501 219.719 51.1182C224.279 56.7427 226.1 62.151 225 67.0846Z"
+              fill="None"
+              stroke="#EDEBC5"
+              stroke-width="2"
+            />
+          </svg>
+          <h1 class="ellipse-text">как</h1>
+        </div>
+        <div class="text1">
+          <h1 class="maintext">услышать себя</h1>
+        </div>
+        <div class="sueta">
+          <h1 class="a">C</h1>
+          <h1 class="cursive">реди вечной суеты</h1>
+        </div>
+        <img
+          src="images/fresh-cooked-yellow-croissant-png.png"
+          alt="croissant"
+          class="croissant"
+        />
+        <img
+          src="images/fresh-cooked-yellow-croissant-png.png"
+          alt="croissant"
+          class="croissant1"
+        />
+        <img
+          src="images/fresh-cooked-yellow-croissant-png.png"
+          alt="croissant"
+          class="croissant2"
+        />
+      </div>
+      <div class="frame">
+        <div class="image">
+          <img
+            src="https://i.pinimg.com/originals/fe/2a/b6/fe2ab6b108581ea5f341e218fe8d429c.gif"
+            alt="im1"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://i.pinimg.com/originals/a4/6d/ef/a46def2c6c43dfb7f0ed4e9d76baf589.gif"
+            alt="im2"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="https://i.pinimg.com/originals/eb/3a/fd/eb3afd67f3928196c59aabf7ad3ec2ef.gif"
+            alt="im3"
+          />
+        </div>
+        <div class="box">
+          <h1>Расскажем, что такое радикальный гедонизм</h1>
+        </div>
+      </div>
+      <h1 class="bodytext">О чем почитать?</h1>
+      <div class="cardholder">
+        <div class="card">
+          <p class="num">(1)</p>
+          <img
+            src="images/fresh-cooked-yellow-croissant-png.png"
+            alt="croissant"
+            class="eda"
+          />
+          <p class="cardtext">еда и наслаждение</p>
+        </div>
+        <div class="card">
+          <p class="num">(2)</p>
+          <img src="images/Vector10.png" alt="places" class="art" />
+          <p class="cardtext">искусство</p>
+        </div>
+        <div class="card">
+          <p class="num">(3)</p>
+          <img src="images/Vector11.png" alt="places" class="places" />
+          <p class="cardtext">места</p>
+        </div>
+        <div class="card">
+          <img src="images/Group31.svg" alt="more" class="more" />
+          <p class="cardtext">смотреть еще</p>
+        </div>
+      </div>
+      <div class="fromm">
+        <img class="frommimg" src="images/image53.png" alt="fromm" />
+        <div class="frommheading">
+          <h1 class="a1">Ч</h1>
+          <h1 class="cursive1">то хотел сказать Эрих Фромм?</h1>
+        </div>
+        <div class="frommp">
+          <p class="frommtext">
+            В истории человечества богатые следовали в своей жизни принципам
+            радикального гедонизма. Обладатели неограниченных средств
+            аристократы Древнего Рима, крупных итальянских городов эпохи
+            Возрождения пытались найти смысл жизни в безграничном наслаждении.
+          </p>
+        </div>
+        <img src="images/_arrow_yellow.svg" alt="arrow" class="_arrow_" />
+      </div>
+      <p class="righttext">Обложка книги «Иметь или быть» — Эрих Фромм</p>
+      <div class="headingdiv">
+        <h1 class="heading">
+          Покажем, где богемно поесть и сделать красивые фоточки
+        </h1>
+      </div>
+      <div class="camera-container">
+        <div class="camera">
+          <img src="images/camera.png" alt="camera" />
+          <div class="ph1"></div>
+        </div>
+      </div>
+      <div class="big-card-container">
+        <div class="invbg">
+          <div class="restheading">
+            <h1 class="a2">К</h1>
+            <h1 class="cursive2">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;уда
+              сбежать от бренных будней?
+            </h1>
+          </div>
+          <p class="resttext">
+            Бренд-шеф <b>Saray</b> Дан Мирон в меню смиксовал ближневосточные
+            хиты и кавказские блюда:<br />
+            тут бухарская самса, мангал-салат, куриный кебаб<br />
+            и харчо соседствуют с лахмаджуном, гребешками<br />
+            со спаржей, крудо из дорадо и крылом ската.<br /><br />
+            Советуем не пропустить коктейльную карту
+            <br />и пропустить по паре гастрономических напитков.
+          </p>
+        </div>
+        <img src="images/image54.png" alt="book" />
+        <p class="booking">Забронировать</p>
+        <img class="arrow" src="images/arrow.svg" alt="arrow" />
+      </div>
+      <p class="righttext">Saray Москва, Гранатный пер., 19</p>
+      <h1 class="bodytext">Что еще посетить?</h1>
+      <div class="cardholder">
+        <div class="card-place">
+          <img src="images/pl1.png" alt="pl1" class="placephoto" />
+          <div class="activity">
+            <h1 class="type">музей</h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="4"
+              height="5"
+              viewBox="0 0 4 5"
+              fill="none"
+            >
+              <circle cx="2" cy="2.5" r="2" fill="#828282" />
+            </svg>
+            <h1 class="type">40км</h1>
+          </div>
+          <h1 class="name">Усадьба Репина «Пенаты»</h1>
+          <p class="place">пос. Репино, Приморское ш., 411</p>
+        </div>
+
+        <div class="card-place">
+          <img src="images/pl2.png" alt="pl2" class="placephoto" />
+          <div class="activity">
+            <h1 class="type">загород</h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="4"
+              height="5"
+              viewBox="0 0 4 5"
+              fill="none"
+            >
+              <circle cx="2" cy="2.5" r="2" fill="#828282" />
+            </svg>
+            <h1 class="type">авторская кухня</h1>
+          </div>
+          <h1 class="name">Глемпинг Forest Lake</h1>
+          <p class="place">ул. Чайковского, 36</p>
+        </div>
+
+        <div class="card-place">
+          <img src="images/pl3.png" alt="pl3" class="placephoto" />
+          <div class="activity">
+            <h1 class="type">ресторан</h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="4"
+              height="5"
+              viewBox="0 0 4 5"
+              fill="none"
+            >
+              <circle cx="2" cy="2.5" r="2" fill="#828282" />
+            </svg>
+            <h1 class="type">авторская кухня</h1>
+          </div>
+          <h1 class="name">Фонтанный дом</h1>
+          <p class="place">Литейный пр., 53</p>
+        </div>
+      </div>
+
+      <h1 class="bodytext">Наша доска в Pinterest</h1>
+      <div class="pin-container">
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin1.svg" alt="pin1" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin2.svg" alt="pin2" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin3.svg" alt="pin3" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin4.svg" alt="pin4" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin5.svg" alt="pin5" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin6.svg" alt="pin6" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin7.svg" alt="pin7" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+
+        <div class="overlay-container">
+          <img class="pin-img" src="images/pin8.svg" alt="pin8" />
+          <a
+            href="https://ru.pinterest.com/asahinskaa/media-pinss/"
+            target="_blank"
+            ><div class="overlay">
+              <div class="goto">
+                <h1>перейти</h1>
+                <img src="images/arrow.svg" alt="" />
+                <h1>в pinterest</h1>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+      <div class="inspire">
+        <img src="images/lamps.png" alt="" class="lamp" />
+        <img src="images/_arrow_.svg" alt="arrow" class="_arrow_" />
+        <div class="inspheading">
+          <h1 class="a3">Ч</h1>
+          <h1 class="cursive3">то такое вдохновение и как его обрести?</h1>
+        </div>
+        <p class="inspp">
+          Вдохновение – главное отличие творческих людей. <br />
+          Под ним подразумевают возможность сделать что-нибудь от души. <br />
+          Это азарт и увлеченность, с которыми легко «свернуть горы». <br />
+          Что необходимо сделать, чтобы оно пришло? <br />
+        </p>
+      </div>
+      <div class="cardholder1">
+        <div class="items">
+          <h1 class="bodytext">Где искать предметы с Pinterest?</h1>
+        </div>
+        <div class="card1">
+          <p class="num">(1)</p>
+          <img src="images/kettle.png" alt="kettle" class="dish" />
+          <p class="cardtext">красивая посуда</p>
+        </div>
+        <div class="card1">
+          <p class="num">(2)</p>
+          <img src="images/heels.svg" alt="heels" class="heels" />
+          <p class="cardtext">туфли</p>
+        </div>
+        <div class="card1">
+          <p class="num">(3)</p>
+          <img src="images/paintings.svg" alt="paintings" class="paintings" />
+          <p class="cardtext">картины</p>
+        </div>
+        <div class="card1">
+          <p class="num">(4)</p>
+          <img src="images/necklace.png" alt="jewelry" class="jewelry" />
+          <p class="cardtext">украшения</p>
+        </div>
+        <div class="card1">
+          <p class="num">(5)</p>
+          <img src="images/iphone.svg" alt="tech" class="tech" />
+          <p class="cardtext">техника</p>
+        </div>
+        <div class="card1">
+          <p class="num">(6)</p>
+          <img src="images/mac.png" alt="cosm" class="cosm" />
+          <p class="cardtext">косметика</p>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h1>Хотите быть в курсе всего?</h1>
+        <p>
+          Подпишитесь на нашу рассылку, вам понравится.<br />
+          Мы обещаем писать редко и по делу
+        </p>
+        <div class="email">
           <form
             id="my-form"
             action="https://formspree.io/f/maygvzgv"
             method="POST"
+            target="_blank"
           >
             <input
               id="pole"
@@ -36,53 +436,184 @@
               name="email"
               placeholder="Ваш e-mail"
             />
-            <!-- <label>Message:</label>
-      <input type="text" name="message" /> -->
-            <button id="my-form-button">подписаться</button>
+
+            <button id="my-form-button">
+              <img src="images/circle-arrow.svg" alt="arrow" />
+            </button>
             <p id="my-form-status"></p>
           </form>
-
-          <script>
-            var form = document.getElementById('my-form')
-
-            async function handleSubmit(event) {
-              event.preventDefault()
-              var status = document.getElementById('my-form-status')
-              var data = new FormData(event.target)
-              fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                  Accept: 'application/json'
-                }
-              })
-                .then((response) => {
-                  if (response.ok) {
-                    status.innerHTML = 'Thanks for your submission!'
-                    form.reset()
-                  } else {
-                    response.json().then((data) => {
-                      if (Object.hasOwn(data, 'errors')) {
-                        status.innerHTML = data['errors']
-                          .map((error) => error['message'])
-                          .join(', ')
-                      } else {
-                        status.innerHTML =
-                          'Oops! There was a problem submitting your form'
-                      }
-                    })
-                  }
-                })
-                .catch((error) => {
-                  status.innerHTML =
-                    'Oops! There was a problem submitting your form'
-                })
-            }
-            form.addEventListener('submit', handleSubmit)
-          </script>
         </div>
-        <p>MADE BY АСЯ&КИКИ</p>
+        <img
+          src="images/fresh-cooked-yellow-croissant-png.png"
+          alt="croissant"
+          class="croissant4"
+        />
+        <img
+          src="images/fresh-cooked-yellow-croissant-png.png"
+          alt="croissant"
+          class="croissant5"
+        />
       </div>
     </div>
+    <div class="footer">
+      <img src="images/alivelogobig.svg" alt="logo" />
+      <p class="design">Дизайн: Ася и КИКИ</p>
+      <p class="hse">HSE ART AND DESIGN SCHOOL</p>
+    </div>
   </body>
+  <script>
+    'use strict'
+
+    console.clear()
+    var body = document.body,
+      html = document.documentElement
+
+    var height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    )
+
+    class Grain {
+      constructor(el) {
+        /**
+         * Options
+         * Increase the pattern size if visible pattern
+         */
+        this.patternSize = 150
+        this.patternScaleX = 1
+        this.patternScaleY = 1
+        this.patternRefreshInterval = 8 // 8
+        this.patternAlpha = 15 // int between 0 and 255,
+
+        /**
+         * Create canvas
+         */
+        this.canvas = el
+        this.ctx = this.canvas.getContext('2d')
+        this.ctx.scale(this.patternScaleX, this.patternScaleY)
+
+        /**
+         * Create a canvas that will be used to generate grain and used as a
+         * pattern on the main canvas.
+         */
+        this.patternCanvas = document.createElement('canvas')
+        this.patternCanvas.width = this.patternSize
+        this.patternCanvas.height = this.patternSize
+        this.patternCtx = this.patternCanvas.getContext('2d')
+        this.patternData = this.patternCtx.createImageData(
+          this.patternSize,
+          this.patternSize
+        )
+        this.patternPixelDataLength = this.patternSize * this.patternSize * 4 // rgba = 4
+
+        /**
+         * Prebind prototype function, so later its easier to user
+         */
+        this.resize = this.resize.bind(this)
+        this.loop = this.loop.bind(this)
+
+        this.frame = 0
+
+        window.addEventListener('resize', this.resize)
+        this.resize()
+
+        window.requestAnimationFrame(this.loop)
+      }
+
+      resize() {
+        this.canvas.width = window.innerWidth * devicePixelRatio
+        this.canvas.height = height
+      }
+
+      update() {
+        const {
+          patternPixelDataLength,
+          patternData,
+          patternAlpha,
+          patternCtx
+        } = this
+
+        // put a random shade of gray into every pixel of the pattern
+        for (let i = 0; i < patternPixelDataLength; i += 4) {
+          // const value = (Math.random() * 255) | 0;
+          const value = Math.random() * 150
+
+          patternData.data[i] = value
+          patternData.data[i + 1] = value
+          patternData.data[i + 2] = value
+          patternData.data[i + 3] = patternAlpha
+        }
+
+        patternCtx.putImageData(patternData, 0, 0)
+      }
+
+      draw() {
+        const { ctx, patternCanvas, canvas, viewHeight } = this
+        const { width, height } = canvas
+
+        // clear canvas
+        ctx.clearRect(0, 0, width, height)
+
+        // fill the canvas using the pattern
+        ctx.fillStyle = ctx.createPattern(patternCanvas, 'repeat')
+        ctx.fillRect(0, 0, width, height)
+      }
+
+      loop() {
+        // only update grain every n frames
+        const shouldDraw = ++this.frame % this.patternRefreshInterval === 0
+        if (shouldDraw) {
+          this.update()
+          this.draw()
+        }
+
+        window.requestAnimationFrame(this.loop)
+      }
+    }
+
+    /**
+     * Initiate Grain
+     */
+    const el = document.querySelector('.grain')
+    const grain = new Grain(el)
+
+    var form = document.getElementById('my-form')
+
+    async function handleSubmit(event) {
+      event.preventDefault()
+      var status = document.getElementById('my-form-status')
+      var data = new FormData(event.target)
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then((response) => {
+          if (response.ok) {
+            status.innerHTML = 'Thanks for your submission!'
+            form.reset()
+          } else {
+            response.json().then((data) => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data['errors']
+                  .map((error) => error['message'])
+                  .join(', ')
+              } else {
+                status.innerHTML =
+                  'Oops! There was a problem submitting your form'
+              }
+            })
+          }
+        })
+        .catch((error) => {
+          status.innerHTML = 'Oops! There was a problem submitting your form'
+        })
+    }
+    form.addEventListener('submit', handleSubmit)
+  </script>
 </html>

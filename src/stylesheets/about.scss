@@ -153,8 +153,6 @@ input {
   top: 50px;
   left: 30px;
   color: #333;
-  leading-trim: both;
-  text-edge: cap;
   font-family: Corporate A Pro;
   font-size: 62px;
   font-style: normal;
@@ -169,8 +167,6 @@ input {
   left: 30px;
   max-width: 267px;
   color: #333;
-  leading-trim: both;
-  text-edge: cap;
   font-family: IBM Plex Sans;
   font-size: 18px;
   font-style: normal;
@@ -197,11 +193,9 @@ input {
   left: 30px;
   width: 345px;
   color: var(--Gray-1, #333);
-  leading-trim: both;
-  text-edge: cap;
   font-family: IBM Plex Sans;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
-  line-height: 131.6%; /* 32.9px */
+  line-height: 131.6%;
 }

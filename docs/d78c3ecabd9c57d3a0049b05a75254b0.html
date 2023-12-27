@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Медиа о гедонизме</title>
+    <analytics></analytics>
+  </head>
+  <body>
+    <div class="pic-sht">
+      <a class="pereh" href="about.html">A</a>
+      <img class="sht" src="./images/sht.svg" alt="Shtuka" />
+    </div>
+
+    <h1>
+      Alive — медиа про гедонизм, свободу и о том, <br />
+      как услышать себя среди вечной суеты
+    </h1>
+
+    <div class="picti">
+      <img class="bab" src="./images/bab.png" alt="bab" />
+      <img class="voda" src="./images/voda.png" alt="voda" />
+    </div>
+
+    <div class="block">
+      <div class="blue-text">
+        <p class="blue-b">/гипотеза</p>
+        <p class="wit-texx">
+          Люди привыкли забывать о своих желаниях <br />
+          и о том, что они по‑настоящему любят <br />
+          в погоне за успехом, карьерой, деньгами
+        </p>
+      </div>
+      <div class="textt">
+        <p class="blue-b">/инсайт</p>
+        <p class="wit-texx">
+          Культура сверхпродуктивности возлагает <br />
+          на нас обязанность постоянно находиться в гонке <br />
+          за успехом. На деле, большое количество людей <br />
+          на самом деле этого не хотят
+        </p>
+      </div>
+    </div>
+    <p class="cif">>50%</p>
+    <p class="poh">
+      респондентов чувствуют вину, <br />
+      когда не работают 24/7
+    </p>
+    <div class="wrapper">
+      <div class="card">
+        <h1>>41%</h1>
+        <p class="paragraph">
+          людей чувствуют себя <br />
+          уставшими и выгоревшими
+        </p>
+      </div>
+      <div class="card">
+        <h1>>>62%</h1>
+        <p class="paragraph">
+          людей не хватает времени <br />
+          на себя и свои увлечения
+        </p>
+      </div>
+      <div class="card">
+        <h1>>>93%</h1>
+        <p class="paragraph">
+          людей бывает апатия <br />
+          и нежелание ничего делать
+        </p>
+      </div>
+    </div>
+    <p class="resh">/решение</p>
+    <div class="wrapper">
+      <div class="card">
+        <img class="nooverlap" src="images/Ellipse 8.png" />
+        <img class="overlap" src="images/Ellipse 9.png" />
+        <p class="bigger_p">
+          Фрилансеры/ <br />
+          предприниматели
+        </p>
+      </div>
+      <div class="card">
+        <img class="nooverlap" src="images/Ellipse 10.png" />
+        <p class="bigger_p">
+          Те, кого не устраивает <br />
+          их работа и образ жизни
+        </p>
+      </div>
+      <div class="card">
+        <img class="nooverlap" src="images/Ellipse 11.png" />
+        <p class="bigger_p">
+          Те, кто нашли себя и любят <br />
+          исследовать мир вокруг
+        </p>
+      </div>
+    </div>
+    <h2>Разделы</h2>
+    <ul>
+      <li><a href="artic.html">Актуальные статьи</a></li>
+      <li><a href="gid.html">Подборки мест гедонизма по категориям</a></li>
+      <li><a href="kult.html">Лучшие рекомендации контента</a></li>
+      <li><a href="philosophy.html">Вдохновение и поддержка</a></li>
+    </ul>
+
+    <div class="gren-fon">
+      <div class="nadpis">
+        <p>УЗНАЙ О ЗАПУСКЕ ПЕРВЫМ</p>
+        <p>ALIVE MEDIA</p>
+      </div>
+      <div class="form-nadpis-2">
+        <div>
+          <form
+            id="my-form"
+            action="https://formspree.io/f/maygvzgv"
+            method="POST"
+          >
+            <input
+              id="pole"
+              type="email"
+              name="email"
+              placeholder="Ваш e-mail"
+            />
+            <!-- <label>Message:</label>
+      <input type="text" name="message" /> -->
+            <button id="my-form-button">подписаться</button>
+            <p id="my-form-status"></p>
+          </form>
+
+          <script>
+            var form = document.getElementById('my-form')
+
+            async function handleSubmit(event) {
+              event.preventDefault()
+              var status = document.getElementById('my-form-status')
+              var data = new FormData(event.target)
+              fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                  Accept: 'application/json'
+                }
+              })
+                .then((response) => {
+                  if (response.ok) {
+                    status.innerHTML = 'Thanks for your submission!'
+                    form.reset()
+                  } else {
+                    response.json().then((data) => {
+                      if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data['errors']
+                          .map((error) => error['message'])
+                          .join(', ')
+                      } else {
+                        status.innerHTML =
+                          'Oops! There was a problem submitting your form'
+                      }
+                    })
+                  }
+                })
+                .catch((error) => {
+                  status.innerHTML =
+                    'Oops! There was a problem submitting your form'
+                })
+            }
+            form.addEventListener('submit', handleSubmit)
+          </script>
+        </div>
+        <p>MADE BY АСЯ&КИКИ</p>
+      </div>
+    </div>
+    <ul></ul>
+  </body>
+</html>
